@@ -1,0 +1,148 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --background-color: hsl(30, 54%, 90%);
+  --text-color: hsl(30, 18%, 87%);
+  --span-color: hsl(30, 10%, 34%);
+  --h1-color: hsl(24, 5%, 18%);
+  --h2-color: hsl(14, 45%, 36%);
+  --h3-color: hsl(332, 51%, 32%);
+  --preparation-background: hsl(330, 100%, 98%);
+}
+
+@font-face {
+  font-family: Outfit;
+  src: url("/recipe-page-main/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: young-serif;
+  src: url("/recipe-page-main/assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+body {
+  background-color: var(--background-color);
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: "Outfit";
+  font-weight: 400;
+  color: var(--span-color);
+}
+
+.container {
+  width: 700px;
+  background-color: var(--white);
+  padding: 1.8rem;
+  border-radius: 10px;
+  margin: 6rem auto;
+}
+
+.heading-container,
+.prep-container,
+.ingredients,
+.instructions,
+.nutrition {
+  padding: 1.35rem 0;
+}
+
+.prep-container {
+  background-color: var(--preparation-background);
+  border-radius: 5%;
+  padding: 20px 30px;
+}
+
+h1 {
+  color: var(--h1-color);
+  font-weight: 400;
+  font-family: "young-serif";
+  padding-bottom: 15px;
+}
+
+h2 {
+  color: var(--h2-color);
+  font-family: "young-serif";
+  font-weight: 400;
+}
+
+h3 {
+  color: var(--h3-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5%;
+}
+
+.instructions span,
+.prep-container span {
+  font-weight: 700;
+  color: var(--span-color);
+}
+
+ul,
+ol {
+  padding: 10px 25px;
+}
+
+.prep-container li::marker {
+  color: var(--h3-color);
+}
+
+.ingredients li::marker {
+  color: var(--h2-color);
+}
+
+.instructions li::marker,
+.nutrition span {
+  color: var(--h2-color);
+  font-weight: 700;
+}
+
+li {
+  padding: 5px 0 5px 12px;
+}
+
+.underline {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.nutrition p {
+  width: 305px;
+}
+
+.nutrition div {
+  display: flex;
+  padding: 1rem 0 1rem 2rem;
+}
+
+@media only screen and (max-width: 540px) {
+  .container {
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    margin: 0 auto;
+  }
+  .container img {
+    border-radius: 0;
+  }
+  .heading-container,
+  .ingredients,
+  .instructions,
+  .nutrition,
+  .prep-container {
+    padding: 1.8rem;
+  }
+  .prep-container {
+    margin: 1.8rem;
+  }
+  .attribution {
+    padding-bottom: 1rem;
+  }
+}
